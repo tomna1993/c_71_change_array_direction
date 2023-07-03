@@ -28,7 +28,7 @@ int main(void)
     char *string = malloc(MAX_STRING * sizeof(char));
 
     // Copy the string into the allocated memory
-    strncpy(string, "Hello world!", MAX_STRING);
+    strncpy_s(string, MAX_STRING, "Hello world!", MAX_STRING);
 
     // Print character array original values
     printf ("Array: %s\n", string);
