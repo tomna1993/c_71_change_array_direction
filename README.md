@@ -17,6 +17,8 @@ Array: Hello world!
 ```
 
 The function must work with any type of array (int, char, float ...).
+  
+- This task can be completed, but it makes the function difficult to understand. It is a better approach to separate it to more functions.
 
 ## LEARNING TASKS
 
