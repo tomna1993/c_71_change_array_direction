@@ -16,10 +16,6 @@ Array: Hello world!
 !dlrow olleH
 ```
 
-The function must work with any type of array (int, char, float ...).
-  
-- This task can be completed, but it makes the function difficult to understand. It is a better approach to separate it to more functions.
-
 ## LEARNING TASKS
 
 - Make errors in the code and try to solve them with the gdb debugger
