@@ -5,6 +5,7 @@
 #define MAX_NUMBERS 5
 #define MAX_STRING 20
 
+void print_num_array(int *numarr, int length);
 void change_int_direction(int *num, int length);
 void change_char_direction(char *string, int length);
 
@@ -14,36 +15,13 @@ int main(void)
     int numbers[MAX_NUMBERS] = {12,5,9,0,30};
 
     // Print numbers array original values
-    printf ("Array: [");
-    for (int i = 0; i < MAX_NUMBERS; i++)
-    {
-        if (i == 0)
-        {
-            printf ("%i", numbers[i]);
-            continue;
-        }
-        
-        printf (", %i", numbers[i]);
-    }
-    printf ("]\n");
+    print_num_array(numbers, MAX_NUMBERS);
 
     // Change direction of the original array
     change_int_direction(numbers, MAX_NUMBERS);
 
-    // Print numbers array original values
-    printf ("Array: [");
-    for (int i = 0; i < MAX_NUMBERS; i++)
-    {
-        if (i == 0)
-        {
-            printf ("%i", numbers[i]);
-            continue;
-        }
-        
-        printf (", %i", numbers[i]);
-    }
-    printf ("]\n");
-
+    print_num_array(numbers, MAX_NUMBERS);
+    
 
 
     // Create a string character array; allocate enough memory for the string
@@ -61,10 +39,27 @@ int main(void)
     // Print character array original values
     printf ("Array: %s\n", string);
 
+
     // Free the allocated memory
     free(string);
 
     return EXIT_SUCCESS;
+}
+
+void print_num_array(int *numarr, int length)
+{
+    printf ("Array: [");
+    for (int i = 0; i < length; i++)
+    {
+        if (i == 0)
+        {
+            printf ("%i", numarr[i]);
+            continue;
+        }
+        
+        printf (", %i", numarr[i]);
+    }
+    printf ("]\n");
 }
 
 void change_int_direction(int *num, int length)
